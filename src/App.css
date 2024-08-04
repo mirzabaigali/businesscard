@@ -1,38 +1,221 @@
-.App {
-  text-align: center;
+.bg-light {
+  background-color: #f8f9fa !important;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.text-dark {
+  color: #212529 !important;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.bg-dark {
+  background-color: #1c1c1c !important;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.text-light {
+  color: #f8f9fa !important;
+}
+
+.custom_card {
+  padding-top: 40px;
+  min-width: 550px;
+  height: 868px;
   display: flex;
   flex-direction: column;
   align-items: center;
+  border-radius: 10px;
+  background-color: #ffffff;
+  transition: background-color 0.3s;
+}
+
+.bg-dark .custom_card {
+  background-color: #23252c;
+}
+.profile_img {
+  width: 317px;
+  height: 317px;
+  flex-shrink: 0;
+}
+.profile_name {
+  margin-top: 19px;
+  width: 178.065px;
+  height: 29.806px;
+  flex-shrink: 0;
+  color: #fff;
+  text-align: center;
+  font-family: Inter;
+  font-size: 28px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+.bg-light .profile_name {
+  color: #1c1c1c;
+}
+.profile_profession {
+  margin: 6.1px 0 9px 0;
+  width: 178.065px;
+  height: 14.194px;
+  flex-shrink: 0;
+  color: #f3bf99;
+  text-align: center;
+  font-family: Inter;
+  font-size: 15.8px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+.bg-light .profile_profession {
+  color: #f47d27;
+}
+.email-btn {
+  display: flex;
+  width: 247px;
+  padding: 9px 13px 9px 11px;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  align-items: center;
+  gap: 8px;
+  border-radius: 6px;
+  border: 1px solid var(--gray-300, #d1d5db);
+  background: var(--white, #fff);
+
+  /* shadow/sm */
+  box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.05);
+}
+.email-img {
+  width: 16px;
+  height: 16px;
+  flex-shrink: 0;
+}
+span {
+  color: var(--gray-700, #374151);
+  font-family: Inter;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 16px; /* 114.286% */
+}
+.main-content {
+  width: 242.712px;
+  height: 28px;
+}
+.bg-dark .main-content p {
   color: white;
 }
-
-.App-link {
-  color: #61dafb;
+.main-content p {
+  flex-shrink: 0;
+  color: #2b283a;
+  font-family: Inter;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 150%;
+}
+.profile-linkwrapper {
+  width: 228px;
+  height: 16px;
+  flex-shrink: 0;
+}
+.profile-link {
+  color: #f5f5f5;
+  text-align: center;
+  font-family: Inter;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%; /* 15.36px */
+}
+.bg-light .profile-link {
+  color: #000;
+}
+.describtion {
+  width: 247px;
+  height: 85px;
+  flex-shrink: 0;
+}
+.describtion p {
+  color: #dcdcdc;
+  font-family: Inter;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%;
+}
+.footer {
+  display: flex;
+  justify-content: center;
+}
+.footer-socialicons {
+  width: 317px;
+  height: 64px;
+  flex-shrink: 0;
+  border-radius: 0px 0px 10px 10px;
+  background: #d5d4d8;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.bg-dark .footer-socialicons {
+  background: #161619;
+}
+.bg-light .describtion p {
+  color: #4a4e74;
+}
+
+/* Media query for screens less than 350px */
+@media (max-width: 380px) {
+  .custom_card {
+    max-width: 100%; /* Ensure the card fits within the viewport */
+    height: auto; /* Allow height to adjust based on content */
+    padding: 10px; /* Add some padding */
   }
-  to {
-    transform: rotate(360deg);
+
+  .profile_img {
+    width: 100%; /* Make the image responsive */
+    height: auto; /* Maintain aspect ratio */
+  }
+
+  .profile_name {
+    font-size: 22px; /* Reduce font size for smaller screens */
+    width: 100%; /* Ensure it fits within the viewport */
+  }
+
+  .profile_profession {
+    font-size: 14px; /* Adjust font size */
+    width: 100%; /* Ensure it fits within the viewport */
+  }
+
+  .email-btn {
+    width: 100%; /* Make the button full width */
+    padding: 8px; /* Adjust padding for smaller screens */
+  }
+
+  .email-img {
+    width: 14px; /* Reduce size of email icon */
+    height: 14px; /* Reduce size of email icon */
+  }
+
+  .main-content p {
+    font-size: 18px; /* Reduce font size */
+  }
+
+  .profile-linkwrapper {
+    width: 100%; /* Ensure it fits within the viewport */
+  }
+
+  .profile-link {
+    font-size: 12px; /* Adjust font size */
+  }
+
+  .describtion {
+    width: 100%; /* Ensure it fits within the viewport */
+    height: auto; /* Adjust height to fit content */
+  }
+
+  .footer-socialicons {
+    width: auto; /* Make the footer full width */
+    height: auto; /* Adjust height based on content */
+    flex-wrap: wrap; /* Allow icons to wrap if needed */
+  }
+
+  .footer-socialicons img {
+    width: auto; /* Reduce size of social icons */
+    height: 20px; /* Reduce size of social icons */
   }
 }
