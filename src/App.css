@@ -16,7 +16,7 @@
 
 .custom_card {
   padding-top: 40px;
-  min-width: 550px;
+  width: 550px;
   height: 868px;
   display: flex;
   flex-direction: column;
@@ -158,64 +158,63 @@ span {
   color: #4a4e74;
 }
 
-/* Media query for screens less than 350px */
-@media (max-width: 380px) {
+/* Media query for screens less than 550px */
+@media (max-width: 560px) {
   .custom_card {
-    max-width: 100%; /* Ensure the card fits within the viewport */
-    height: auto; /* Allow height to adjust based on content */
-    padding: 10px; /* Add some padding */
+    max-width: 100%;
+  }
+}
+@media (max-width: 325px) {
+  .profile_img {
+    max-width: 100%;
+    height: auto;
+  }
+  .footer-socialicons {
+    max-width: 60%;
+  }
+}
+
+@media (max-width: 290px) {
+  .profile_name,
+  .profile_profession,
+  .email-btn,
+  .main-content,
+  .describtion {
+    width: 80%;
+    height: auto;
+    margin: 0 auto; 
   }
 
   .profile_img {
-    width: 100%; /* Make the image responsive */
-    height: auto; /* Maintain aspect ratio */
+    max-width: 100%;
+    height: auto;
   }
 
-  .profile_name {
-    font-size: 22px; /* Reduce font size for smaller screens */
-    width: 100%; /* Ensure it fits within the viewport */
-  }
-
-  .profile_profession {
-    font-size: 14px; /* Adjust font size */
-    width: 100%; /* Ensure it fits within the viewport */
-  }
-
-  .email-btn {
-    width: 100%; /* Make the button full width */
-    padding: 8px; /* Adjust padding for smaller screens */
-  }
-
-  .email-img {
-    width: 14px; /* Reduce size of email icon */
-    height: 14px; /* Reduce size of email icon */
-  }
-
+  .describtion p,
   .main-content p {
-    font-size: 18px; /* Reduce font size */
-  }
-
-  .profile-linkwrapper {
-    width: 100%; /* Ensure it fits within the viewport */
+    font-size: 16px;
   }
 
   .profile-link {
-    font-size: 12px; /* Adjust font size */
+    font-size: 12px;
   }
 
-  .describtion {
-    width: 100%; /* Ensure it fits within the viewport */
-    height: auto; /* Adjust height to fit content */
+  .footer {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 0 10px;
   }
 
   .footer-socialicons {
-    width: auto; /* Make the footer full width */
-    height: auto; /* Adjust height based on content */
-    flex-wrap: wrap; /* Allow icons to wrap if needed */
-  }
-
-  .footer-socialicons img {
-    width: auto; /* Reduce size of social icons */
-    height: 20px; /* Reduce size of social icons */
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    margin-top: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    border-radius: 0;
   }
 }

@@ -11,12 +11,12 @@ import "./App.css";
 function App() {
   return (
     <>
-      <div className="d-flex justify-content-end">
-        <ToggleMood />
-      </div>
-      <div className="container d-flex justify-content-center mt-5">
+      <div className="container">
         <div className="row">
-          <div className="col-12">
+          <div className="col-12 d-flex justify-content-end mt-2">
+            <ToggleMood />
+          </div>
+          <div className="col-12 mt-2  d-flex justify-content-center">
             <div className="custom_card">
               <header>
                 <img
@@ -69,7 +69,7 @@ function App() {
                   </p>
                 </div>
               </main>
-              <div className="footer">
+              <footer className="d-flex justify-content-center">
                 <div className="footer-socialicons d-flex justify-content-around align-items-center">
                   <div>
                     <img src={twitter} alt="logo" />
@@ -87,7 +87,7 @@ function App() {
                     <img src={github} alt="logo" />
                   </div>
                 </div>
-              </div>
+              </footer>
             </div>
           </div>
         </div>
